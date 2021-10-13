@@ -1,5 +1,6 @@
 <template>
   <div class="form form-group">
+    <input type="text" v-model="TweetObj.tweet_id" class="form-control" placeholder="user name">
     <textarea
     name="form"
     id=""
@@ -22,14 +23,13 @@ export default {
   data() {
     return {
       TweetObj:{
-        tweet_id:0,
+        tweet_id:'',
         tweet_body:'',
       },
     }
   },
   methods: {
     doTweet(){
-      this.TweetObj.tweet_id += 1
       // 第一引数を無名オブジェクト指定すると、TweetObjをコピーした内容の新規オブジェクトを作成できる
       const tweet = Object.assign({},this.TweetObj)
       this.$emit('tweet-event',tweet)

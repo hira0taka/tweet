@@ -5,8 +5,9 @@
     </div>
     <div class="card-Body">
       <div class="card-text">
-        {{ TweetObj.tweet_body }}
+        <p class="body">{{ TweetObj.tweet_body }}</p>
         <hr />
+        <div class="body">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -21,6 +22,7 @@
             />
           </svg>
           {{ like }}
+        </div>
       </div>
     </div>
   </div>
@@ -39,11 +41,17 @@ export default {
   },
   methods: {
     document() {
-this.like++ ;
+      this.like++;
     },
   },
 };
 </script>
 
 <style>
+.card {
+  margin-top: 17px;
+}
+.body {
+  margin: 15px;
+}
 </style>
