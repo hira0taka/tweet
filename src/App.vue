@@ -26,14 +26,16 @@ export default {
   },
   data() {
     return {
+      // tweet_idとtweet_bodyを持つ配列AllTweetを作る
       AllTweet: Array.of({
-        tweet_id: 0,
+        tweet_id: "ユーザー@test",
         tweet_body: "はじめてのツイート",
       }),
     };
   },
   methods: {
     tweetAction(TweetObj) {
+      // AllTweetにTweetObjを追加
       this.AllTweet.push(TweetObj);
     },
   },

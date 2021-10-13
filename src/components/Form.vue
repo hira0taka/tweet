@@ -30,6 +30,7 @@ export default {
   methods: {
     doTweet(){
       this.TweetObj.tweet_id += 1
+      // 第一引数を無名オブジェクト指定すると、TweetObjをコピーした内容の新規オブジェクトを作成できる
       const tweet = Object.assign({},this.TweetObj)
       this.$emit('tweet-event',tweet)
     },
